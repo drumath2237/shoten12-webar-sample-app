@@ -1,6 +1,6 @@
-import "./style.scss";
+import './style.scss';
 
-const renderCanvas = <HTMLCanvasElement>document.getElementById("renderCanvas");
+const renderCanvas = <HTMLCanvasElement>document.getElementById('renderCanvas');
 
 if (renderCanvas) {
   // something...
