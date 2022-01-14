@@ -4,3 +4,7 @@ dist
 dist-ssr
 *.local
 yarn-error.log
+
+cert.pem
+
+key.pem
