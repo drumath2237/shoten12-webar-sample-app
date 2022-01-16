@@ -11,11 +11,17 @@ const main = async () => {
     const scene = new BABYLON.Scene(engine);
 
     scene.createDefaultCameraOrLight(true, true, true);
-    scene.createDefaultEnvironment();
+    // scene.createDefaultEnvironment();
 
     const boxSize = 0.2;
     const box = BABYLON.MeshBuilder.CreateBox('box', { size: boxSize });
-    box.position.addInPlaceFromFloats(0, boxSize / 2.0, 0);
+    box.position.addInPlaceFromFloats(0, 1.6, 0);
+
+    await scene.createDefaultXRExperienceAsync({
+      uiOptions: {
+        sessionMode: 'immersive-ar',
+      },
+    });
 
     engine.runRenderLoop(() => {
       scene.render();
